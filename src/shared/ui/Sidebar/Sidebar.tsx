@@ -1,6 +1,7 @@
-import { useState } from "react"
-import * as cls from "./Sidebar.module.scss"
-import classNames from "shared/lib/classNames/classNames"
+import { useState } from "react";
+import * as cls from "./Sidebar.module.scss";
+import classNames from "shared/lib/classNames/classNames";
+import { useTranslation } from "react-i18next";
 
 export enum SideparCollapseWidth {
     ICON = "iconCollapsed",
@@ -8,24 +9,27 @@ export enum SideparCollapseWidth {
 }
 
 export interface SidebarProps extends React.ComponentProps<"div"> {
-    renderCollapsed? :boolean;
-    collapseWidth?: SideparCollapseWidth
+    renderCollapsed?: boolean;
+    collapseWidth?: SideparCollapseWidth;
 }
 
 export const Sidebar = (props: SidebarProps) => {
-    const {className, renderCollapsed, collapseWidth} = props,
-        [collapsed, setCollapsed] = useState<boolean>(renderCollapsed ? renderCollapsed : false);
+    const { className, renderCollapsed, collapseWidth } = props;
+    const [collapsed, setCollapsed] = useState<boolean>(renderCollapsed ? renderCollapsed : false);
+    const { t } = useTranslation();
 
     function handleToggle() {
         setCollapsed(!collapsed);
     }
 
-    const collapseType:string = collapseWidth ? cls[collapseWidth] : cls[SideparCollapseWidth.FULL];
+    const collapseType: string = collapseWidth
+        ? cls[collapseWidth]
+        : cls[SideparCollapseWidth.FULL];
 
     return (
-        <div className={classNames(cls.Sidebar, {[collapseType]: collapsed}, [className])}>
-            <button onClick={handleToggle}>toggle</button>
+        <div className={classNames(cls.Sidebar, { [collapseType]: collapsed }, [className])}>
+            <button onClick={handleToggle}>{t("toggle")}</button>
             {props.children}
         </div>
-    )
-}
+    );
+};

@@ -1,5 +1,7 @@
 {
-    "test_translation": "Test translation",
     "translate": "Translate",
-    "welcome_to_main": "Welcome to the main page"
+    "welcome_to_main": "Welcome to the main page",
+    "main_label": "Main",
+    "about_label": "About",
+    "toggle": "Toggle"
 }
