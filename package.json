@@ -11,7 +11,9 @@
         "lint:scss": "stylelint \"**/*.scss\"",
         "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
         "lint:ts": "eslint src",
-        "lint:ts:fix": "eslint src --fix"
+        "lint:ts:fix": "eslint src --fix",
+        "lint": "concurrently \"lint:ts\" \"lint:scss\"",
+        "prepare": "husky"
     },
     "keywords": [],
     "author": "",
@@ -31,6 +33,7 @@
         "@types/react-router-dom": "^5.3.3",
         "@types/webpack": "^5.28.5",
         "@types/webpack-dev-server": "^4.5.1",
+        "concurrently": "^9.0.1",
         "css-loader": "^7.1.2",
         "eslint": "^9.11.1",
         "eslint-plugin-i18next": "^6.1.0",
@@ -47,6 +50,7 @@
         "style-loader": "^4.0.0",
         "stylelint": "^16.9.0",
         "stylelint-config-standard": "^36.0.1",
+        "stylelint-config-standard-scss": "^13.1.0",
         "ts-loader": "^9.5.1",
         "ts-node": "^10.9.2",
         "typescript": "^5.6.2",
