@@ -1,0 +1,15 @@
+.Sidebar {
+    background-color: teal;
+    position: relative;
+    transition: width 0.3s;
+    width: 30%;
+    height: 100%;
+}
+
+.collapsed {
+    width: 0px;
+}
+
+.iconCollapsed {
+    width: 60px;
+}

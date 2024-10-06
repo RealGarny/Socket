@@ -1,0 +1,13 @@
+.ThemeSwitcher {
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    background: none;
+    border: 2px solid var(--inverted-secondary-color);
+    box-sizing: content-box;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
