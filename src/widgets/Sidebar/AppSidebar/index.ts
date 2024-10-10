@@ -1,2 +1,2 @@
-import { AppSidebar, AppSidebarProps } from './ui/AppSidebar'
-export {AppSidebar, AppSidebarProps}
+import { AppSidebar } from "./ui/AppSidebar";
+export { AppSidebar };

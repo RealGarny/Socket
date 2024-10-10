@@ -4,5 +4,9 @@
     "main_label": "Главная",
     "about_label": "О сайте",
     "welcome_to_main": "Добро пожаловать на главную страницу",
-    "toggle": "Сменить"
+    "toggle": "Сменить",
+    "PageNotFound": "Страница не найдена",
+    "uncaught_error_occured": "Произошла непредвиденная ошибка",
+    "update_page": "Обновить страницу",
+    "error.throw_error": "Throw an error"
 }

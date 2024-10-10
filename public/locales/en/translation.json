@@ -3,5 +3,9 @@
     "welcome_to_main": "Welcome to the main page",
     "main_label": "Main",
     "about_label": "About",
-    "toggle": "Toggle"
+    "toggle": "Toggle",
+    "PageNotFound": "Page was not found",
+    "uncaught_error_occured": "Uncaught error occured",
+    "update_page": "Update page",
+    "error.throw_error": "Выбросить ошибку"
 }

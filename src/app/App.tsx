@@ -7,16 +7,16 @@ import { Suspense } from "react";
 import { LangSwitcher } from "widgets/LangSwitcher";
 
 const App: React.FC = () => {
-    const {theme} = useTheme();
+    const { theme } = useTheme();
     return (
         <div className={`app ${theme}`}>
-            <Suspense fallback="">
-                <Navbar/>
+            <Suspense fallback={""}>
+                <Navbar />
                 <div className="content-page">
                     <AppSidebar>
-                        <LangSwitcher/>
+                        <LangSwitcher />
                     </AppSidebar>
-                    <AppRouter/>
+                    <AppRouter />
                 </div>
             </Suspense>
         </div>
