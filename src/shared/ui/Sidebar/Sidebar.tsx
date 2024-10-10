@@ -27,8 +27,13 @@ export const Sidebar = (props: SidebarProps) => {
         : cls[SideparCollapseWidth.FULL];
 
     return (
-        <div className={classNames(cls.Sidebar, { [collapseType]: collapsed }, [className])}>
-            <button onClick={handleToggle}>{t("toggle")}</button>
+        <div
+            data-testid="sidebar"
+            className={classNames(cls.Sidebar, { [collapseType]: collapsed }, [className])}
+        >
+            <button data-testid="sidebar-toggle" onClick={handleToggle}>
+                {t("toggle")}
+            </button>
             {props.children}
         </div>
     );
