@@ -11,7 +11,6 @@ describe("Button FC", () => {
         renderWithTranslation(<Sidebar />);
         expect(screen.getByTestId("sidebar")).toBeInTheDocument();
         const toggleBtn = screen.getByTestId("sidebar-toggle");
-        console.log("test", screen.getByTestId("sidebar"));
         fireEvent.click(toggleBtn);
         expect(screen.getByTestId("sidebar")).toHaveClass("collapsed");
     });
