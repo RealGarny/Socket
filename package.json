@@ -5,6 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test:unit": "jest --config ./config/jest/jest.config.ts",
+        "test:ui": "npx loki test",
+        "test:ui:ok": "npx loki approve",
+        "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
         "start": "webpack serve --env port=3000",
         "build:prod": "webpack --env mode=production",
         "build:dev": "webpack --env mode=development",
@@ -14,7 +17,7 @@
         "lint:ts:fix": "eslint src --fix",
         "lint": "concurrently \"npm run lint:ts\" \"npm run lint:scss\"",
         "storybook": "storybook dev -c ./config/storybook -p 6006",
-        "build-storybook": "storybook build -c ./config/storybook",
+        "storybook:build": "storybook build -c ./config/storybook",
         "prepare": "husky"
     },
     "keywords": [],
